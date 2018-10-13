@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ListItemRoot">
+
+    <LinearLayout style="@style/ListItem">
+
+        <LinearLayout
+            android:id="@+id/item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/general_margin"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textName"
+                style="@style/ProdName" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/textName"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/CurrencyText"
+                    android:text=" $ " />
+
+                <TextView
+                    android:id="@+id/textPrice"
+                    style="@style/ProdPrice" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textQuantity"
+                    style="@style/ProdQuantity"
+                    tools:text="5" />
+
+                <TextView
+                    android:id="@+id/text_available"
+                    style="@style/AvailableText" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/buy"
+            style="@style/buyNow"
+            android:background="@drawable/button_shape"
+            android:text="Buy" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/colorPrimaryOpaque"></LinearLayout>
+</LinearLayout>
